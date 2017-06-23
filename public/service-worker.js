@@ -12,26 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v1';
-var cacheName = 'weatherPWA-step-6-1';
+var dataCacheName = 'Owlvegrammo-v1';
+var cacheName = 'Owlvegrammo-1';
 var filesToCache = [
   '/',
   '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/images/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
+  '/js/app.js',
+  '/js/materialize.js',
+  '/js/materialize.min.js',
+  '/css/materialize.css',
+  '/css/materialize.min.css',
+  '/images/cover_basic_of_C.jpg',
+  '/images/cover_introduction_of_programming.jpg',
+  '/images/cover_python_for_beginer.png'
 ];
 
 self.addEventListener('install', function(e) {
