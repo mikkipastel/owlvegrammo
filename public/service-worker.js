@@ -16,17 +16,25 @@ var dataCacheName = 'Owlvegrammo-v1';
 var cacheName = 'Owlvegrammo-1';
 var filesToCache = [
   '/',
+  '/favicon.ico',
   '/index.html',
+  '/about.html',
+  '/introduction-of-programming.html',
+  '/python-for-beginer.html',
   '/js/app.js',
   '/js/materialize.js',
   '/js/materialize.min.js',
+  '/css/style.css',
   '/css/materialize.css',
   '/css/materialize.min.css',
   '/images/cover_basic_of_C.jpg',
   '/images/cover_introduction_of_programming.jpg',
   '/images/cover_python_for_beginer.png'
+  '/images/introduction_programming_01.jpg'
+  '/images/introduction_programming_02.jpg'
 ];
 
+// for offline mode
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
@@ -93,4 +101,31 @@ self.addEventListener('fetch', function(e) {
       })
     );
   }
+});
+
+// for push notification
+self.registration.showNotification(title, options);
+
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push Codelab';
+  const options = {
+    body: 'Yay it works.',
+    icon: 'images/icon.png',
+    badge: 'images/badge.png'
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    clients.openWindow('https://owlvegrammo.firebaseapp.com)
+  );
 });

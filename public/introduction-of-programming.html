@@ -1,0 +1,121 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owlvegrammo</title>
+  <meta name="author" content="Monthira C.">
+  <link rel="icon" href="favicon.ico">
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Owlvegrammo">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+  
+</head>
+
+<body>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  
+  <!-- For nav bar on mobile -->
+  <script>
+    (function($){
+      $(function(){
+        $('.button-collapse').sideNav();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+  </script>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Owlvegrammo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html"><i class="material-icons">home</i></a></li>
+        <li><a href="about.html"><i class="material-icons">info_outline</i></a></li>
+        <li><a href="#"><i class="material-icons">add_alert</i></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Push Notification</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel panel content -->
+  <div class="carousel carousel-slider center" data-indicators="true">
+    <!-- <div class="carousel-fixed-item center"> -->
+      <!-- <a class="btn waves-effect white grey-text darken-text-2">button</a> -->
+    <!-- </div> -->
+    <div class="carousel-item blue white-text" href="#1!">
+      <h2>1. การทำงานของคอมพิวเตอร์เบื้องต้น</h2>
+      <p class="white-text">เดิมทีเวลาที่เราป้อนคำสั่งเข้าไปในคอมพิวเตอร์ เครื่องคอมของเราจะแปลงเป็นภาษาเครื่อง(Machine Language) ซึ่งเป็นเลขฐานสอง ภายหลังมีการพัฒนาภาษาโปรแกรม โดยเริ่มจากภาษาแอสเซมบลี (Assembly Language) เป็นภาษาระดับต่ำ (Low-level Language) จนพัฒนาภาษาให้ใกล้เคียงกับมนุษย์มากขี้น จนเป็นภาษาโปรแกรมที่เราใช้กัน คือ ภาษาระดับสูง (High-level Language) เช่น C , C++ ,C# , JAVA , PHP , Pascal เป็นต้น</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#2!">
+      <h2>2. การแปลภาษาของโปรแกรม</h2>
+      <p class="white-text">การแปลภาษาของโปรแกรม มี 2 แบบ คือ</p>
+      <p><img src="images/introduction_programming_01.jpg" width="511.25" height="287.75"/></p>
+      <li class="white-text">Interpreter เป็นการแปลคำสั่งทีละบรรทัด เมื่อพบข้อผิดพลาด โปรแกรมจะหยุดทำงานทันที ทำให้โปรแกรมทำงานค่อนข้างช้า เช่น ภาษา python</li>
+      <li class="white-text">Compiler เป็นการแปลคำสั่งทั้งโปรแกรม ถ้าพบข้อผิดพลาด โปรแกรมจะแสดงข้อผิดพลาดออกมา ทำให้โปรแกรมทำงานได้เร็วกว่า เช่น ภาษา C</li>
+    </div>
+    <div class="carousel-item blue white-text" href="#3!">
+      <h2>3. Flowchart</h2>
+      <p class="white-text">เป็นการวางแผนผังการทำงานของโปรแกรมที่เราเขียน โดยใช้มาตรฐานของ ANSI (American National Standards Institute) เช่น</p>
+      <p><img src="images/introduction_programming_02.jpg" width="443.75" height="323.75"/></p>
+    </div>
+    <div class="carousel-item blue white-text" href="#4!">
+      <h2>4. Preprocesser directory</h2>
+      <p class="white-text">ทุกไฟล์ในทุกภาษาจะต้องมีการเรียกใช้ library ต่างๆก่อน จึงจะเข้าสู่การ compile program ...</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#5!">
+      <h2>5. Data type</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-lighten-4 center" href="https://mikkipastel.firebaseapp.com">© 2017 MikkiPastel</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
