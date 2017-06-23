@@ -1,69 +1,115 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
-    <style media="screen">
-      body {
-        font-family: Roboto, Arial, sans-serif;
-        background: #ECEFF1;
-        color: rgba(0,0,0,0.87);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owlvegrammo</title>
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-      a {
-        color: rgb(3,155,229);
-      }
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Owlvegrammo">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
 
-      #message {
-        max-width: 400px;
-        margin: 40px auto;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
-        border-radius: 2px;
-        background: white;
-        padding: 16px 24px;
-      }
+<body>
 
-      #message h1 {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 0 16px;
-      }
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 
-      #message p {
-        font-weight: 300;
-        line-height: 150%;
-      }
-
-      #message ul {
-        list-style: none;
-        margin: 16px 0 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      #message li a {
-        display: inline-block;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-        background: rgb(3,155,229);
-        color: white;
-        border: 1px solid rgb(3,155,229);
-        border-radius: 3px;
-        font-size: 14px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h1>Welcome to Firebase Hosting</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <ul>
-        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Owlvegrammo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"><i class="material-icons">home</i></a></li>
+        <li><a href="#"><i class="material-icons">info_outline</i></a></li>
+        <li><a href="#"><i class="material-icons">add_alert</i></a></li>
       </ul>
     </div>
-  </body>
+  </nav>
+
+  <!-- Programming card -->
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/cover_introduction_of_programming.jpg">
+          <span class="card-title">Introduction of Programming</span>
+        </div>
+        <div class="card-content">
+          <p>มาทำความรู้จักเกี่ยวกับการเขียนโปรแกรมกันก่อน ว่าภาษาคอมพิวเตอร์มีอะไรบ้าง และต้องเรียนรู้อะไรบ้างในการเขียนโปรแกรม</p>
+        </div>
+        <div class="card-action">
+          <a href="#">START</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/cover_basic_of_C.jpg">
+          <span class="card-title">Basic of C</span>
+        </div>
+        <div class="card-content">
+          <p>มาเรียนรู้การเขียนภาษา C ตั้งแต่ต้นยันจบ เพียงพอต่อการสอบวิชาโปรแกรมมิ่งเบื้องต้น ในสถานบันการศึกษาที่สอนภาษาซี แน่นอน</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/cover_python_for_beginer.png">
+          <span class="card-title">Python of beginer</span>
+        </div>
+        <div class="card-content">
+          <p>เรียนรู้ภาษา python ในระดับพื้นฐาน ก่อนที่จะต่อยอดกับงานอื่นๆ เช่น back-end, embedded system และ data analysis ทุกคนสามารถอเรียนรู้ได้ง่าย</p>
+        </div>
+        <div class="card-action">
+          <a href="#">START</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-lighten-4 center" href="https://mikkipastel.firebaseapp.com">© 2017 MikkiPastel</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
