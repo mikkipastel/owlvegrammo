@@ -126,6 +126,5 @@ self.addEventListener('notificationclick', function(event) {
   event.notification.close();
 
   event.waitUntil(
-    clients.openWindow('https://owlvegrammo.firebaseapp.com)
-  );
-});
+    clients.openWindow('https://owlvegrammo.firebaseapp.com')
+  );});
