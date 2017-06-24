@@ -23,6 +23,8 @@ var filesToCache = [
   '/01-introduction-of-programming/2.html',
   '/01-introduction-of-programming/3.html',
   '/01-introduction-of-programming/4.html',
+  '/01-introduction-of-programming/5.html',
+  '/01-introduction-of-programming/6.html',
   '/03-python-for-beginer/1.html',
   '/03-python-for-beginer/2.html',
   '/03-python-for-beginer/3.html',
@@ -56,6 +58,8 @@ var filesToCache = [
   '/images/cover_python_for_beginer.png',
   '/images/introduction_programming_01.jpg',
   '/images/introduction_programming_02.jpg',
+  '/images/introduction_programming_03.png',
+  '/images/introduction_programming_04.png',
   '/images/python_beginner_01.png',
   '/images/python_beginner_02.png'
 ];
