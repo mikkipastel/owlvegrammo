@@ -89,28 +89,28 @@ self.addEventListener('fetch', event => {
 
 
 // for push notification
-// self.registration.showNotification(title, options);
+self.registration.showNotification(title, options);
 
-// self.addEventListener('push', function(event) {
-  // console.log('[Service Worker] Push Received.');
-  // console.log('[Service Worker] Push had this data: "${event.data.text()}"');
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log('[Service Worker] Push had this data: "${event.data.text()}"');
 
-  // const title = 'Push Codelab';
-  // const options = {
-    // body: 'Yay it works.',
-    // icon: 'images/icon.png',
-    // badge: 'images/badge.png'
-  // };
+  const title = 'Push Codelab';
+  const options = {
+    body: 'Yay it works.',
+    icon: 'images/icon.png',
+    badge: 'images/badge.png'
+  };
 
-  // event.waitUntil(self.registration.showNotification(title, options));
-// });
+  event.waitUntil(self.registration.showNotification(title, options));
+});
 
-// self.addEventListener('notificationclick', function(event) {
-  // console.log('[Service Worker] Notification click Received.');
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
 
-  // event.notification.close();
+  event.notification.close();
 
-  // event.waitUntil(
-    // clients.openWindow('https://owlvegrammo.firebaseapp.com')
-  // );
-// });
+  event.waitUntil(
+    clients.openWindow('https://owlvegrammo.firebaseapp.com')
+  );
+});
