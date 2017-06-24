@@ -1,0 +1,204 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python for Beginner</title>
+  <meta name="author" content="Monthira C.">
+  <link rel="icon" href="../favicon.ico">
+  <meta name="theme-color" content='#a333ff'>
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="../manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Owlvegrammo">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="../images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#a333ff">
+  
+</head>
+
+<body>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  
+  <!-- For nav bar on mobile -->
+  <script>
+    (function($){
+      $(function(){
+        $('.button-collapse').sideNav();
+      }); // end of document ready
+    })(jQuery); // end of jQuery name space
+  </script>
+
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Owlvegrammo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../index.html"><i class="material-icons">home</i></a></li>
+        <li><a href="../about.html"><i class="material-icons">info_outline</i></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel panel content -->
+  <div class="row">
+    <div class="col s12">
+      <div class="card amber darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">4 Data type และการประกาศตัวแปร</span>
+            <p>Data type ใน python ไม่ได้มียุ่บยับหรือภาษาอื่น หลักๆมีสามตัวคือ<br /><br /></p>
+            <li>Number : ตัวเลขทั้งหลาย เราจะบวกลบคูณหารผ่าน python ก็ทำได้ง่าย สบายๆเลย เช่น<br /></li>
+			บวก ลบ คูณ หาร &nbsp; &nbsp;: +, -, *, / &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&gt; &nbsp; &nbsp; &nbsp; 7/2<br />
+การหารเอาเศษ &nbsp; &nbsp; &nbsp;: mod % &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=&gt; &nbsp; &nbsp; &nbsp; &nbsp;7/2<br />
+เลขยกกำลัง &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp;power ** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&gt; &nbsp; &nbsp; &nbsp; &nbsp;7**2<br />
+การหารแบบปัดลง :&nbsp;floor division // &nbsp; =&gt; &nbsp; &nbsp; &nbsp; &nbsp; 7//2<br />
+การหารแบบปัดขึ้น :&nbsp;round() &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=&gt; &nbsp; &nbsp; &nbsp; &nbsp; round(7/2)<br />
+<br />
+ตัวอย่าง<br />
+2^n - 1 จะได้เป็น (2**n)-1<br />
+pi r^2 จะได้เป็น pi*(r**2)<br /><br />
+ตัวแปรประเภท Number ประกาศ data type เป็น เลขจำนวนเต็ม int() และ จำนวนทศนิยม float()<br />
+หรือประกาศเป็นเลขฐานต่างๆก็ได้ด้วยนะ เช่น เลขฐานสอง bin() เลขฐานสิบหก hex() เช่น<br />
+<div class="graf graf--p" name="d66a">
+<span style="color: #274e13;">int(‘11001100’,2) #204 แปลงเลขฐานสองเป็นฐานสิบ<br />int(‘0x20’,16) #32</span><span style="color: #274e13;">&nbsp;</span><span style="color: #274e13;">แปลงเลขฐานสิบหกเป็นฐานสิบ</span></div>
+<div class="graf graf--p">
+<span style="color: #274e13;">bin(int(‘0xDEC’,16)) #แปลงเลขฐานสิบหกเป็นฐานสิบ และแปลงเป็นเลขฐานสอง</span></div>
+<div class="graf graf--p">
+<span style="color: #274e13;">hex(int(‘101010101010’,2)) #0xAAA แปลงเลขฐานสองเป็นฐานสิบ และแปลงเป็นเลขฐานสิบหก</span></div>
+<br />
+การทำ Fixed point number<br />
+<span style="color: #274e13;">from decimal import Decimal</span><br />
+<span style="color: #274e13;">interest = Decimal(“6.4200”)</span><br /><br />
+            <li>String : ตัวอักษร พี่เหลือมสามารถเล่นได้เยอะแยะเลย ทั้งการเลือกตัวอักษร ตัดทิ้ง บวกสตริง เซ็คความยาว<br /></li>
+			การสร้างตัวแปร string ใหม่ : <span style="color: #274e13;">hello = str()</span><br />
+<br />
+การตรวจสอบความยาวของ string : <span style="color: #274e13;">len(hello)</span><br />
+ถ้าความยาวเป็น 0 นั่นคือเป็นตัวแปร string เปล่าๆ นั่นเอง<br />
+<br />
+ค้นหาคำที่เราต้องการในตัวแปร string : <span style="color: #274e13;">find()</span><br />
+<br />
+การตัดคำ<br />
+การนำ space หัวท้ายออกจากกัน : <span style="color: #274e13;">strip()</span><br />
+การตัดคำออกตามที่เราต้องการ : <span style="color: #274e13;">split()</span><br />
+การแทนค่าคำ : <span style="color: #274e13;">replace()</span><br />
+<br />
+<i>ช่วงลองทำดู</i> เนื่องจากมันเล่นได้หนุกหนาน เลยมีอะไรให้ลองทำนิดหน่อย<br />
+1. ให้ตัวแปร string&nbsp;ชื่อว่า hello แล้วกัน มีค่า<br />
+Hello, it's me. I was wondering if after all these years<br />
+<div>
+2. ตรวจสอบความยาวของ hello<br />
+3. หาคำว่า me ใน hello<br />
+4. ตัดคำจาก space ออกเป็นคำๆ<br />
+5. แทนค่าคำว่า me ว่า you<br />
+<br />
+<span style="color: #274e13;"><i>คำเฉลย</i></span><br />
+<span style="color: #274e13;">hello = "Hello, it's me. I was wondering if after all these years"</span><br />
+<span style="color: #274e13;">len(hello)</span><br />
+<span style="color: #274e13;">hello.find("me")</span><br />
+<span style="color: #274e13;">hello.split(" ")</span><br />
+<span style="color: #274e13;">hello.replace("me","you")</span><br />
+<br />
+เราสามารถใช้ escaped with backslashes (\n \r\n \t \0 \x) ใน python ได้ด้วยนะ<br /><br />
+            <li>List : อันนี้อาจจะต่างจากพวกภาษา C แต่ภาษาอื่นๆก็มี มันคล้ายๆ array แต่ไม่ใช่ซะทีเดียว<br /></li>
+            list = [1, 2, ,3, ...]<br />
+<br />
+การใส่ค่าใน list ไม่จำเป็นต้องใส่ค่าประเทภเดียวกัน เช่น<br />
+member = [“brown”, 94, True]<br />
+<br />
+การเพิ่มสมาชิกใหม่ มี 2 แบบ คือ append, extend<br />
+- append : ใส่เป็นคำ หรือตัวเลขก็ได้ =&gt; <span style="color: #274e13;">list.append()</span><br />
+- extend &nbsp;: ใส่เป็น string character =&gt;<span style="color: #274e13;">list.extend([])</span><br />
+<br />
+การลบสมาชิกออก ใช้ <span style="color: #274e13;">list.remove()</span> ข้างในใส่สมาชิกตัวที่เราต้องการจะลบ<br />
+ถ้าล้างไส้ในทั้งหมด ใช้ <span style="color: #274e13;">list.clear()</span><br />
+<br />
+การตรวจสอบความยาวของ list ใช้คำสั่ง <span style="color: #274e13;">len(list)</span><br />
+<span style="color: #274e13;"><br /></span>
+ตัวอย่างการใช้งาน<br />
+fav_stock = ["ADVANC", "BEM", "CPALL", "CPF", "AU"]<br />
+1. เพิ่ม "BAY"<br />
+2. ลบ "AU"<br />
+3. เปลี่ยน "ADVANC"&nbsp;เป็น "INTOUCH"<br />
+4. หาจำนวนชื่อหุ้นใน fav_stock<br />
+<div>
+<br /></div>
+<div>
+<span style="color: #274e13;"><i>คำเฉลย</i></span></div>
+<div>
+<span style="color: #274e13;">fav_stock.append("BAY")</span></div>
+<div>
+<span style="color: #274e13;">fav_stock.remove("AU")</span></div>
+<div>
+<span style="color: #274e13;">fav_stock[0] = "INTOUCH"</span></div>
+<div>
+<span style="color: #274e13;">len(fav_stock)</span></div>
+<br />
+<u>- Boolean</u>&nbsp;อันนี้เหมือนภาษาอื่นๆ มีค่าสองแบบเท่านั้น คือ True กับ False<br />
+<div>
+<br /></div>
+สรุป python ไม่ต้องประกาศตัวแปรให้วุ่นวาย เช่น uint8 i = 0; งี้ แค่ใส่ค่าไปเลย เช่น i = 0 จบ<br />
+        </div>
+      </div>
+    </div>
+    <!-- Page button -->
+    <a class="btn-floating btn-large waves-effect waves-light red left" href="3.html">
+      <!-- For modern browsers. -->
+      <i class="material-icons">navigate_before</i>
+      <!-- For IE9 or below. -->
+      <i class="material-icons">&#xE408;</i>
+    </a>
+    <a class="btn-floating btn-large waves-effect waves-light red right" href="5.html">
+      <!-- For modern browsers. -->
+      <i class="material-icons">navigate_next</i>
+      <!-- For IE9 or below. -->
+      <i class="material-icons">&#xE409;</i>
+    </a>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-lighten-4 center" href="https://mikkipastel.firebaseapp.com">© 2017 MikkiPastel</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
