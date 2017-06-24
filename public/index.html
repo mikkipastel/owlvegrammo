@@ -71,7 +71,6 @@
       <ul class="side-nav" id="mobile-demo">
         <li><a href="#">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#">Push Notification</a></li>
       </ul>
     </div>
   </nav>
@@ -110,7 +109,7 @@
       <div class="card">
         <div class="card-image">
           <img src="images/cover_python_for_beginer.png">
-          <span class="card-title">Python of beginer</span>
+          <span class="card-title">Python of beginner</span>
         </div>
         <div class="card-content">
           <p>เรียนรู้ภาษา python ในระดับพื้นฐาน ก่อนที่จะต่อยอดกับงานอื่นๆ เช่น back-end, embedded system และ data analysis ทุกคนสามารถอเรียนรู้ได้ง่าย</p>
@@ -130,6 +129,19 @@
       </div>
     </div>
   </footer>
+  
+      <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+    </script>
 
 </body>
 </html>
